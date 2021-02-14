@@ -79,28 +79,11 @@ public class SDLSurface
     }
 
     public boolean onKey(View view, int n, KeyEvent keyEvent) {
-	    Log.d("onKEY", "onKey: " + n);
 	if(LauncherActivity.mPref.getBoolean( "use_volume_buttons", false )) {
-		if( n == KeyEvent.KEYCODE_VOLUME_DOWN){
-			n = KeyEvent.KEYCODE_BUTTON_R2;
-			Log.d("onKEY", "onKeyVolumeDown: " + n);
-			if(keyEvent.getAction()==0){
-				SDLActivity.onNativeJoystickAxis(MotionEvent.AXIS_RTRIGGER, 1);
-			}
-			else{
-				SDLActivity.onNativeJoystickAxis(MotionEvent.AXIS_RTRIGGER, 0);
-			}
-		}
-		else if(n == KeyEvent.KEYCODE_VOLUME_UP){
-			n = KeyEvent.KEYCODE_BUTTON_L2;
-			Log.d("onKEY", "onKeyVolumeUp: " + n);
-			if(keyEvent.getAction()==0){
-				SDLActivity.onNativeJoystickAxis(MotionEvent.AXIS_LTRIGGER, 1);
-			}
-			else{
-				SDLActivity.onNativeJoystickAxis(MotionEvent.AXIS_LTRIGGER, 0);
-			}
-		}
+		if( n == KeyEvent.KEYCODE_VOLUME_DOWN)
+			n = KeyEvent.KEYCODE_P;
+		else if(n == KeyEvent.KEYCODE_VOLUME_UP)
+			n = KeyEvent.KEYCODE_L;
 	}
 
 	if( n == KeyEvent.KEYCODE_BACK )
