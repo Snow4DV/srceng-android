@@ -128,6 +128,7 @@ public class DirchActivity extends Activity implements OnTouchListener{
 	{
 		List<String> list = new ArrayList<String>();
 		File fileList[] = new File("/storage/").listFiles();
+		if(fileList == null) return null;
 		for (File file : fileList)
 		{
 			Log.v("SHIT", file.getAbsolutePath());
