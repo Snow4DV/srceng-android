@@ -79,6 +79,7 @@ public class SDLSurface
     }
 
     public boolean onKey(View view, int n, KeyEvent keyEvent) {
+	    Toast.makeText("onKeyListener", "Pressed:" + n, Toast.LENGTH_SHORT).show();
 	if(LauncherActivity.mPref.getBoolean( "use_volume_buttons", false )) {
 		if( n == KeyEvent.KEYCODE_VOLUME_DOWN)
 			n = KeyEvent.KEYCODE_BUTTON_R2;
