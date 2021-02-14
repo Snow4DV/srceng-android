@@ -81,9 +81,9 @@ public class SDLSurface
     public boolean onKey(View view, int n, KeyEvent keyEvent) {
 	if(LauncherActivity.mPref.getBoolean( "use_volume_buttons", false )) {
 		if( n == KeyEvent.KEYCODE_VOLUME_DOWN)
-			n = KeyEvent.KEYCODE_BUTTON_R2;
+			n = KeyEvent.KEYCODE_P;
 		else if(n == KeyEvent.KEYCODE_VOLUME_UP)
-			n = KeyEvent.KEYCODE_BUTTON_L2;
+			n = KeyEvent.KEYCODE_L;
 	}
 
 	if( n == KeyEvent.KEYCODE_BACK )
