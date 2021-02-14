@@ -84,7 +84,7 @@ public class SDLSurface
 		if( n == KeyEvent.KEYCODE_VOLUME_DOWN){
 			n = KeyEvent.KEYCODE_BUTTON_R2;
 			Log.d("onKEY", "onKeyVolumeDown: " + n);
-			SDLActivity.onNativeJoystickAxis(n, 1023);
+			SDLActivity.onNativeJoystickAxis(n, 1);
 		}
 		else if(n == KeyEvent.KEYCODE_VOLUME_UP){
 			n = KeyEvent.KEYCODE_BUTTON_L2;
